@@ -1,9 +1,3 @@
-import sys
-from pathlib import Path
-file = Path(__file__).resolve()
-parent, root = file.parent, file.parent[2]
-sys.path.append(str(root))
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -12,20 +6,13 @@ import time
 import os
 import glob
 import subprocess
-import pyautogui
 from dotenv import load_dotenv
 
 inicio = time.time()
 load_dotenv()
 
-class MainController:
-    
-    @classmethod    
-    def iniciar_programa():
-        print('Iniciando...')
-    
-    @classmethod
-    def iniciar_selenium():
+class SeleniumController:
+    def __init__(self):
         driver = webdriver.Chrome()
         
         driver.get("https://logincloud.senior.com.br/logon/LogonPoint/tmindex.html")
