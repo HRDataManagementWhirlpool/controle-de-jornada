@@ -1,6 +1,10 @@
 from qt_core import *
 
+# IMPORT PAGES
 from gui.pages.ui_pages import Ui_application_pages
+
+# IMPORT CUSTOM WIDGETS
+from gui.widgets.py_push_button import PyPushButton
 
 class Ui_MainWindow(object):
     def setup_ui(self, parent):
@@ -8,8 +12,8 @@ class Ui_MainWindow(object):
             parent.setObjectName("MainWindow")
         
         # SET INITIAL PARAMETERS
-        parent.resize(960, 540)
-        parent.setMinimumSize(600, 400)
+        parent.resize(1200, 600)
+        parent.setMinimumSize(960, 540)
         
         # CREATE CENTRAL WIDGET
         self.central_frame = QFrame()
@@ -27,34 +31,71 @@ class Ui_MainWindow(object):
         self.left_menu.setMaximumWidth(50)
         
         # LEFT MENU LAYOUT
-        self.left_menu_layout = QHBoxLayout(self.left_menu)
+        self.left_menu_layout = QVBoxLayout(self.left_menu)
         self.left_menu_layout.setContentsMargins(0,0,0,0)
         self.left_menu_layout.setSpacing(0)
         
         # TOP FRAME MENU
         self.left_menu_top_frame = QFrame()
         self.left_menu_top_frame.setMinimumHeight(50)
-        self.left_menu_top_frame.setStyleSheet("background-color: red")
+        self.left_menu_top_frame.setObjectName("left_menu_top_frame")
+        self.left_menu_top_frame.setStyleSheet("#left_menu_top_frame { background-color: red; }")
+        
+        # TOP FRAME LAYOUT
+        self.left_menu_top_layout = QVBoxLayout(self.left_menu_top_frame)
+        self.left_menu_top_layout.setContentsMargins(0,0,0,0)
+        self.left_menu_top_layout.setSpacing(0)
+        
+        # TOP BTNS
+        self.toggle_button = PyPushButton(
+            text="Ocultar menu"
+            )
+        self.btn_1 = PyPushButton(
+            text="Página Inicial",
+            is_active=True
+        )
+        self.btn_2 = PyPushButton(
+            text="Página 2"
+        )
+        
+        # ADD TOP BTNS TO LAYOUT
+        self.left_menu_top_layout.addWidget(self.toggle_button)
+        self.left_menu_top_layout.addWidget(self.btn_1)
+        self.left_menu_top_layout.addWidget(self.btn_2)
         
         # MENU SPACER
         self.left_menu_spacer = QSpacerItem(20,20, QSizePolicy.Minimum, QSizePolicy.Expanding)
         
         # BOTTOM FRAME MENU
         self.left_menu_bottom_frame = QFrame()
-        self.left_menu_bottom_frame.setMinimumHeight(50)
-        self.left_menu_bottom_frame.setStyleSheet("background-color: red")
+        self.left_menu_bottom_frame.setObjectName("left_menu_bottom_frame")
+        self.left_menu_bottom_frame.setStyleSheet("#left_menu_bottom_frame { background-color: red; }")
+
+        # BOTTOM FRAME LAYOUT
+        self.left_menu_bottom_layout = QVBoxLayout(self.left_menu_bottom_frame)
+        self.left_menu_bottom_layout.setContentsMargins(0,0,0,0)
+        self.left_menu_bottom_layout.setSpacing(0)
+        
+        # BOTTOM BTNS
+        self.settings_btn = PyPushButton(
+            text="Configurações"
+        )
+        
+        # ADD BOTTOM BTNS TO LAYOUT
+        self.left_menu_bottom_layout.addWidget(self.settings_btn)
         
         # LABEL VERSION
-        self.left_menu_version = QLabel("v1.0.0")
-        self.left_menu_version.setAlignment(Qt.AlignCenter)
-        self.left_menu_version.setMinimumHeight(30)
-        self.left_menu_version.setMaximumHeight(30)
+        self.left_menu_label_version = QLabel("v1.0.0")
+        self.left_menu_label_version.setAlignment(Qt.AlignCenter)
+        self.left_menu_label_version.setMinimumHeight(30)
+        self.left_menu_label_version.setMaximumHeight(30)
+        self.left_menu_label_version.setStyleSheet("color: #C3CCDF")
         
         # ADD TO LAYOUT
         self.left_menu_layout.addWidget(self.left_menu_top_frame)
         self.left_menu_layout.addItem(self.left_menu_spacer)
         self.left_menu_layout.addWidget(self.left_menu_bottom_frame)
-        self.left_menu_layout.addWidget(self.left_menu_version)
+        self.left_menu_layout.addWidget(self.left_menu_label_version)
         
         # CONTENT
         self.content = QFrame()
