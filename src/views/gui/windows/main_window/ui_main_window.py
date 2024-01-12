@@ -37,9 +37,8 @@ class Ui_MainWindow(object):
         
         # TOP FRAME MENU
         self.left_menu_top_frame = QFrame()
-        self.left_menu_top_frame.setMinimumHeight(50)
+        self.left_menu_top_frame.setMinimumHeight(40)
         self.left_menu_top_frame.setObjectName("left_menu_top_frame")
-        self.left_menu_top_frame.setStyleSheet("#left_menu_top_frame { background-color: red; }")
         
         # TOP FRAME LAYOUT
         self.left_menu_top_layout = QVBoxLayout(self.left_menu_top_frame)
@@ -48,14 +47,17 @@ class Ui_MainWindow(object):
         
         # TOP BTNS
         self.toggle_button = PyPushButton(
-            text="Ocultar menu"
+            text="Ocultar menu",
+            icon_path="icon_menu.svg"
             )
         self.btn_1 = PyPushButton(
             text="Página Inicial",
+            icon_path="icon_home.svg",
             is_active=True
         )
         self.btn_2 = PyPushButton(
-            text="Página 2"
+            text="Página 2",
+            icon_path="icon_widgets.svg"
         )
         
         # ADD TOP BTNS TO LAYOUT
@@ -68,8 +70,8 @@ class Ui_MainWindow(object):
         
         # BOTTOM FRAME MENU
         self.left_menu_bottom_frame = QFrame()
+        self.left_menu_bottom_frame.setMinimumHeight(40)
         self.left_menu_bottom_frame.setObjectName("left_menu_bottom_frame")
-        self.left_menu_bottom_frame.setStyleSheet("#left_menu_bottom_frame { background-color: red; }")
 
         # BOTTOM FRAME LAYOUT
         self.left_menu_bottom_layout = QVBoxLayout(self.left_menu_bottom_frame)
@@ -78,7 +80,8 @@ class Ui_MainWindow(object):
         
         # BOTTOM BTNS
         self.settings_btn = PyPushButton(
-            text="Configurações"
+            text="Configurações",
+            icon_path="icon_settings.svg"
         )
         
         # ADD BOTTOM BTNS TO LAYOUT
