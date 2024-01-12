@@ -60,7 +60,7 @@ class MainWindow(QMainWindow):
     def change_text(self):
         text = self.ui.ui_pages.lineEdit.text()
         new_text = f"Olá, {text}"
-        self.ui.ui_pages.label_3.setText(new_text)
+        self.ui.ui_pages.label.setText(new_text)
         
     def toggle_button(self):
         

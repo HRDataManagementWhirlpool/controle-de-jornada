@@ -16,12 +16,24 @@
   <widget class="QWidget" name="page_1">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="label_1">
-      <property name="text">
-       <string>Página Inicial</string>
+     <widget class="QFrame" name="frame">
+      <property name="minimumSize">
+       <size>
+        <width>500</width>
+        <height>70</height>
+       </size>
       </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
+      <property name="maximumSize">
+       <size>
+        <width>500</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
     </item>
@@ -46,7 +58,7 @@
     <item>
      <widget class="QLabel" name="label_3">
       <property name="text">
-       <string>Página 3</string>
+       <string>Configurações</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
