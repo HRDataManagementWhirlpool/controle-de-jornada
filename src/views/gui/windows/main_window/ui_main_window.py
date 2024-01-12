@@ -118,13 +118,13 @@ class Ui_MainWindow(object):
         self.top_bar_layout.setContentsMargins(10,0,10,0)
         
         # TOP LEFT LABEL
-        self.top_label_left = QLabel("Essa é a minha primeira tela")
+        self.top_label_left = QLabel("Automação de Processos")
         
         # TOP SPACER
         self.top_spacer = QSpacerItem(20,20,QSizePolicy.Expanding, QSizePolicy.Minimum)
         
         # TOP RIGHT LABEL
-        self.top_label_right = QLabel("Mensagem à direita")
+        self.top_label_right = QLabel("Controle de Jornada")
         
         # ADD TO LAYOUT
         self.top_bar_layout.addWidget(self.top_label_left)
@@ -146,13 +146,13 @@ class Ui_MainWindow(object):
         self.bottom_bar_layout.setContentsMargins(10,0,10,0)
         
         # BOTTOM LEFT LABEL
-        self.bottom_label_left = QLabel("Parte inferior da tela")
+        self.bottom_label_left = QLabel("SmartFlow Team")
         
         # BOTTOM SPACER
         self.bottom_spacer = QSpacerItem(20,20,QSizePolicy.Expanding, QSizePolicy.Minimum)
         
         # BOTTOM RIGHT LABEL
-        self.bottom_label_right = QLabel("Mensagem à direita")
+        self.bottom_label_right = QLabel("Raphael Alexsandro")
         
         # ADD TO LAYOUT
         self.bottom_bar_layout.addWidget(self.bottom_label_left)
