@@ -5,7 +5,7 @@ from qt_core import *
 
 from gui.windows.main_window.ui_main_window import *
 
-# MAIN WINDOW
+# MAIN WINDOW'
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
